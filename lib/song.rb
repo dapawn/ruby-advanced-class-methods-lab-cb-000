@@ -28,7 +28,7 @@ class Song
   end
 
   def self.find_by_name(name)
-    @@all[i] if i ||= @@all.find_index { |s| s.name == name }
+    @@all[name] if name = @@all.find_index { |s| s.name == name }
   end
 
   def self.find_or_create_by_name(name)
