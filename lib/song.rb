@@ -31,7 +31,7 @@ class Song
     @@all[@@all.find_index { |s| s.name == name }]
   end
 
-  def find_or_create_by_name(name) 
+  def find_or_create_by_name(name)
 
   end
 end
