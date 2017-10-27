@@ -40,7 +40,9 @@ class Song
   end
 
   def self.new_from_filename(file)
-
+    info = file.match(/(.*) - (.*).mp3/)
+    s = new_by_name(info[1])
+    s.artist = info[0]
   end
 
   def self.create_from_filename(file)
