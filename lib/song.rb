@@ -45,13 +45,13 @@ class Song
     info = file.match(/(.*) - (.*)\.mp3/)
     s = new_by_name(info[1])
     s.artist_name = info[0]
+    binding.pry
     s
   end
 
   def self.create_from_filename(file)
 
   end
-
   def self.destroy_all
      @@all.clear
   end
