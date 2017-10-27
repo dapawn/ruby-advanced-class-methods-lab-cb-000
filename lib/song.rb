@@ -50,7 +50,11 @@ class Song
   end
 
   def self.create_from_filename(file)
-
+    info = file.match(/(.*) - (.*)\.mp3/)
+    s = create_by_name(info[2])
+    s.artist_name = info[1]
+    #binding.pry
+    s
   end
   def self.destroy_all
      @@all.clear
